@@ -10,10 +10,11 @@ app.use(express.urlencoded({ extended: true }));
 
 // Import routes
 const loginRoute = require('./routes/login');
+const registerRoute = require('./routes/register');
 
 // Use the routes
 app.use('/api', loginRoute);
-
+app.use('/register', registerRoute); 
 // Start the server
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
